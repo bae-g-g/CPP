@@ -115,13 +115,17 @@ int main(){
     
 
 
-    // 입력값이 홀수인경우를 위헤 중간에 놓이는 경우를 따로 계산합니다.
-    int temp = ans*2;
-    ans = 0;
-    add(0,N/2);
-    fn(1);
-    std::cout<<ans+temp;
+    if(N &1){   // 입력값이 홀수인경우 중간에 놓이는 경우를 따로 계산합니다.
+        int temp = ans*2;
+        ans = 0;
+        add(0,N/2);
+        fn(1);
+        std::cout<<ans+temp;
 
+    }
+    else{
+        std::cout<<ans*2;
+    }
      
 
     
